@@ -27,6 +27,14 @@ Route::post('/listings', [ListingController::class, 'store']);
 // Single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
+// Show Edit Form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
+// Delete Listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+
+// Update Listing
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
 
 // Common Resource Routes;
 // index - Show all listings
